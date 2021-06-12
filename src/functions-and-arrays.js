@@ -197,7 +197,10 @@ function howManyTimes(wordsCount, word) {
   }
 }
 
-// Iteration #8: Bonus
+// ##########################
+// ## Iteration #8 - Bonus ##
+// ##########################
+
 const matrix = [
   [8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
   [49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 4, 56, 62, 0],
@@ -221,7 +224,30 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct() {}
+// const matrix = [08, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77, 91, 08]; <<< 4204200
+
+function greatestProduct(matrix) {
+  let productH = 0;
+  let over9000 = 0;
+  for (j = 0; j < matrix.length - 1; j++) {
+    for (i = 0; i < matrix[j].length - 3; i++) {
+      productH = matrix[j][i] * matrix[j][i + 1] * matrix[j][i + 2] * matrix[j][i + 3];
+      if (productH > over9000) {
+        over9000 = productH;
+      }
+    }
+  }
+  productV = 0;
+  for (k = 0; k < matrix[0].length - 1; k++) {
+    for (z = 0; z < matrix.length - 3; z++) {
+      productV = matrix[z][k] * matrix[z][k + 1] * matrix[z][k + 2] * matrix[z][k + 3];
+      if (productV > over9000) {
+        over9000 = productV;
+      }
+    }
+  }
+  return over9000;
+}
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */

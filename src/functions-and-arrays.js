@@ -65,19 +65,50 @@ function sum(mixedArr) {
   }
 }
 
-// Iteration #4: Calculate the average
+// #########################################
+// ## Iteration #4: Calculate the average ##
+// #########################################
+
 // Level 1: Array of numbers
+
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(numbersAvg) {
+  if (!numbersAvg.length) {
+    return null;
+  } else {
+    return sumNumbers(numbersAvg) / numbersAvg.length;
+  }
+}
 
 // Level 2: Array of strings
+
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() {}
+function averageWordLength(wordsArr) {
+  if (!wordsArr.length) {
+    return null;
+  } else {
+    letters = 0;
+    for (let i = 0; i < wordsArr.length; i++) {
+      letters += wordsArr[i].length;
+    }
+    return letters / wordsArr.length;
+  }
+}
 
-// Bonus - Iteration #4.1
-function avg() {}
+// ############################
+// ## Iteration #4.1 - Bonus ##
+// ############################
+
+function avg(mixedArr) {
+  if (!mixedArr.length) {
+    return null;
+  } else {
+    result = (sum(mixedArr) / mixedArr.length).toFixed(2);
+    return parseFloat(result);
+  }
+}
 
 // Iteration #5: Unique arrays
 const wordsUnique = [

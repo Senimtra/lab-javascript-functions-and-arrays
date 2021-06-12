@@ -132,12 +132,14 @@ function uniquifyArray(wordsUnique) {
   if (!wordsUnique.length) {
     return null;
   } else {
-    for (let i = 0; i < wordsUnique.length; i++) {
-      if (wordsUnique.indexOf(wordsUnique[i]) !== -1) {
-        wordsUnique.splice(i, 1);
+    let resultArr = [];
+    for (i = 0; i < wordsUnique.length; i++) {
+      if (resultArr.indexOf(wordsUnique[i]) === -1) {
+        resultArr.push(wordsUnique[i]);
       }
     }
-    return wordsUnique;
+    console.log(resultArr);
+    return resultArr;
   }
 }
 

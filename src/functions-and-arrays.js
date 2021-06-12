@@ -110,7 +110,10 @@ function avg(mixedArr) {
   }
 }
 
-// Iteration #5: Unique arrays
+// #################################
+// ## Iteration #5: Unique arrays ##
+// #################################
+
 const wordsUnique = [
   'crab',
   'poison',
@@ -125,9 +128,23 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(wordsUnique) {
+  if (!wordsUnique.length) {
+    return null;
+  } else {
+    for (let i = 0; i < wordsUnique.length; i++) {
+      if (wordsUnique.indexOf(wordsUnique[i]) !== -1) {
+        wordsUnique.splice(i, 1);
+      }
+    }
+    return wordsUnique;
+  }
+}
 
-// Iteration #6: Find elements
+// #################################
+// ## Iteration #6: Find elements ##
+// #################################
+
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
 function doesWordExist() {}

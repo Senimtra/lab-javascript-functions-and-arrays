@@ -153,15 +153,17 @@ function doesWordExist(wordsFind, word) {
   if (!wordsFind.length) {
     return null;
   } else {
+    let existCount = 0;
     for (let i = 0; i < wordsFind.length; i++) {
       if (wordsFind[i] === word) {
-        return true;
-      } else {
-        return false;
+        existCount++;
       }
     }
+    return existCount > 0 ? true : false;
   }
 }
+
+doesWordExist(wordsFind, 'machine');
 
 // ####################################
 // ## Iteration #7: Count repetition ##

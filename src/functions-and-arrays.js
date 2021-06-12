@@ -147,7 +147,19 @@ function uniquifyArray(wordsUnique) {
 
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist(wordsFind, word) {
+  if (!wordsFind.length) {
+    return null;
+  } else {
+    for (let i = 0; i < wordsFind.length; i++) {
+      if (wordsFind[i] === word) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+}
 
 // Iteration #7: Count repetition
 const wordsCount = [

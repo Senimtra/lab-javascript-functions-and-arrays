@@ -27,13 +27,43 @@ function findLongestWord(words) {
   return longest;
 }
 
-// Iteration #3: Calculate the sum
+// #####################################
+// ## Iteration #3: Calculate the sum ##
+// #####################################
+
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(numbers) {
+  let sumArray = 0;
+  numbers.forEach(function (number) {
+    sumArray += number;
+  });
+  return sumArray;
+}
 
-// Iteration #3.1 Bonus:
-function sum() {}
+// ############################
+// ## Iteration #3.1 - Bonus ##
+// ############################
+
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+
+function sum(mixedArr) {
+  let sumMixed = 0;
+  if (!mixedArr.length) {
+    return 0;
+  } else {
+    for (let i = 0; i < mixedArr.length; i++) {
+      if (typeof mixedArr[i] === 'number' || typeof mixedArr[i] === 'boolean') {
+        sumMixed += mixedArr[i];
+      } else if (typeof mixedArr[i] === 'string') {
+        sumMixed += mixedArr[i].length;
+      } else {
+        throw "Unsupported data type sir or ma'am";
+      }
+    }
+    return sumMixed;
+  }
+}
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
